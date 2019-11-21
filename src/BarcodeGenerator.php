@@ -36,7 +36,7 @@ use Lukfor85\Barcode\Exceptions\InvalidFormatException;
 use Lukfor85\Barcode\Exceptions\InvalidLengthException;
 use Lukfor85\Barcode\Exceptions\UnknownTypeException;
 
-abstract class BarcodeGenerator
+class BarcodeGenerator
 {
     const TYPE_CODE_39 = 'C39';
     const TYPE_CODE_39_CHECKSUM = 'C39+';
@@ -77,7 +77,7 @@ abstract class BarcodeGenerator
      * @return array barcode array
      * @public
      */
-    protected function getBarcodeData($code, $type)
+    public function getBarcodeData($code, $type)
     {
         switch (strtoupper($type)) {
             case self::TYPE_CODE_39:
