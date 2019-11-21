@@ -1,8 +1,8 @@
 <?php
 
-namespace Picqer\Barcode;
+namespace Lukfor85\Barcode;
 
-use Picqer\Barcode\Exceptions\BarcodeException;
+use Lukfor85\Barcode\Exceptions\BarcodeException;
 
 class BarcodeGeneratorPNG extends BarcodeGenerator
 {

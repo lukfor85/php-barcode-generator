@@ -27,14 +27,14 @@
 //
 // See LICENSE.TXT file for more information.
 
-namespace Picqer\Barcode;
+namespace Lukfor85\Barcode;
 
-use Picqer\Barcode\Exceptions\BarcodeException;
-use Picqer\Barcode\Exceptions\InvalidCharacterException;
-use Picqer\Barcode\Exceptions\InvalidCheckDigitException;
-use Picqer\Barcode\Exceptions\InvalidFormatException;
-use Picqer\Barcode\Exceptions\InvalidLengthException;
-use Picqer\Barcode\Exceptions\UnknownTypeException;
+use Lukfor85\Barcode\Exceptions\BarcodeException;
+use Lukfor85\Barcode\Exceptions\InvalidCharacterException;
+use Lukfor85\Barcode\Exceptions\InvalidCheckDigitException;
+use Lukfor85\Barcode\Exceptions\InvalidFormatException;
+use Lukfor85\Barcode\Exceptions\InvalidLengthException;
+use Lukfor85\Barcode\Exceptions\UnknownTypeException;
 
 abstract class BarcodeGenerator
 {
