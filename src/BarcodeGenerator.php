@@ -125,26 +125,26 @@ abstract class BarcodeGenerator
                 $arrcode = $this->barcode_i25($code, true);
                 break;
             }
-            case self::TYPE_CODE_128:
-            { // CODE 128
-                $arrcode = $this->barcode_c128($code, '');
-                break;
-            }
-            case self::TYPE_CODE_128_A:
-            { // CODE 128 A
-                $arrcode = $this->barcode_c128($code, 'A');
-                break;
-            }
-            case self::TYPE_CODE_128_B:
-            { // CODE 128 B
-                $arrcode = $this->barcode_c128($code, 'B');
-                break;
-            }
-            case self::TYPE_CODE_128_C:
-            { // CODE 128 C
-                $arrcode = $this->barcode_c128($code, 'C');
-                break;
-            }
+//            case self::TYPE_CODE_128:
+//            { // CODE 128
+//                $arrcode = $this->barcode_c128($code, '');
+//                break;
+//            }
+//            case self::TYPE_CODE_128_A:
+//            { // CODE 128 A
+//                $arrcode = $this->barcode_c128($code, 'A');
+//                break;
+//            }
+//            case self::TYPE_CODE_128_B:
+//            { // CODE 128 B
+//                $arrcode = $this->barcode_c128($code, 'B');
+//                break;
+//            }
+//            case self::TYPE_CODE_128_C:
+//            { // CODE 128 C
+//                $arrcode = $this->barcode_c128($code, 'C');
+//                break;
+//            }
             case self::TYPE_EAN_2:
             { // 2-Digits UPC-Based Extention
                 $arrcode = $this->barcode_eanext($code, 2);
