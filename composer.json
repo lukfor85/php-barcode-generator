@@ -19,7 +19,7 @@
     "require": {
         "php": "^7.4",
         "ext-bcmath": "*",
-        "ext-gd": "*",
+        "ext-gd": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.3"
