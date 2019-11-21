@@ -232,7 +232,7 @@ abstract class BarcodeGenerator
             }
             default:
             {
-                throw new UnknownTypeException();
+                throw new UnknownTypeException('');
                 break;
             }
         }
@@ -1090,7 +1090,7 @@ abstract class BarcodeGenerator
             $char_bar = $code[$i];
             $char_space = $code[$i + 1];
             if (!isset($chr[$char_bar]) || !isset($chr[$char_space])) {
-                throw new InvalidCharacterException();
+                throw new InvalidCharacterException('');
             }
             // create a bar-space sequence
             $seq = '';
@@ -1300,7 +1300,7 @@ abstract class BarcodeGenerator
                     if (preg_match('/([0-9]{2})/', $chrnum) > 0) {
                         $code_data[] = (int)$chrnum;
                     } else {
-                        throw new InvalidCharacterException();
+                        throw new InvalidCharacterException('');
                     }
                 }
                 break;
@@ -1555,7 +1555,7 @@ abstract class BarcodeGenerator
             // add check digit
             $code .= $r;
         } elseif ($r !== (int)$code[$data_len]) {
-            throw new InvalidCheckDigitException();
+            throw new InvalidCheckDigitException('');
         }
         if ($len == 12) {
             // UPC-A
@@ -1733,7 +1733,7 @@ abstract class BarcodeGenerator
             $r = (3 * ($code[0] + $code[2] + $code[4])) + (9 * ($code[1] + $code[3]));
             $r %= 10;
         } else {
-            throw new InvalidCheckDigitException();
+            throw new InvalidCheckDigitException('');
         }
         //Convert digits to bars
         $codes = [
@@ -2707,7 +2707,7 @@ abstract class BarcodeGenerator
     protected function barcode_imb_pre($code)
     {
         if (!preg_match('/^[fadtFADT]{65}$/', $code) == 1) {
-            throw new InvalidFormatException();
+            throw new InvalidFormatException('');
         }
         $characters = str_split(strtolower($code), 1);
         // build bars
