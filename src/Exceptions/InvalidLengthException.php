@@ -2,4 +2,6 @@
 
 namespace Lukfor85\Barcode\Exceptions;
 
-class InvalidLengthException extends BarcodeException {}
+class InvalidLengthException extends BarcodeException
+{
+}

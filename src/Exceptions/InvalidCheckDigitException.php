@@ -2,4 +2,6 @@
 
 namespace Lukfor85\Barcode\Exceptions;
 
-class InvalidCheckDigitException extends BarcodeException {}
+class InvalidCheckDigitException extends BarcodeException
+{
+}

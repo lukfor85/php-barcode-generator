@@ -2,4 +2,8 @@
 
 namespace Lukfor85\Barcode\Exceptions;
 
-class BarcodeException extends \Exception {}
+use Exception;
+
+class BarcodeException extends Exception
+{
+}

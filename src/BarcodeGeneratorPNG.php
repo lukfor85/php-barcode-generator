@@ -2,6 +2,9 @@
 
 namespace Lukfor85\Barcode;
 
+use Imagick;
+use imagickdraw;
+use imagickpixel;
 use Lukfor85\Barcode\Exceptions\BarcodeException;
 
 class BarcodeGeneratorPNG extends BarcodeGenerator
@@ -18,7 +21,7 @@ class BarcodeGeneratorPNG extends BarcodeGenerator
      * @return string image data or false in case of error.
      * @public
      */
-    public function getBarcode($code, $type, $widthFactor = 2, $totalHeight = 30, $color = array(0, 0, 0))
+    public function getBarcode($code, $type, $widthFactor = 2, $totalHeight = 30, $color = [0, 0, 0])
     {
         $barcodeData = $this->getBarcodeData($code, $type);
 
@@ -35,10 +38,10 @@ class BarcodeGeneratorPNG extends BarcodeGenerator
             $colorForeground = imagecolorallocate($png, $color[0], $color[1], $color[2]);
         } elseif (extension_loaded('imagick')) {
             $imagick = true;
-            $colorForeground = new \imagickpixel('rgb(' . $color[0] . ',' . $color[1] . ',' . $color[2] . ')');
-            $png = new \Imagick();
+            $colorForeground = new imagickpixel('rgb(' . $color[0] . ',' . $color[1] . ',' . $color[2] . ')');
+            $png = new Imagick();
             $png->newImage($width, $height, 'none', 'png');
-            $imageMagickObject = new \imagickdraw();
+            $imageMagickObject = new imagickdraw();
             $imageMagickObject->setFillColor($colorForeground);
         } else {
             throw new BarcodeException('Neither gd-lib or imagick are installed!');

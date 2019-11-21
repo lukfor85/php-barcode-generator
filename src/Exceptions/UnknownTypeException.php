@@ -2,4 +2,6 @@
 
 namespace Lukfor85\Barcode\Exceptions;
 
-class UnknownTypeException extends BarcodeException {}
+class UnknownTypeException extends BarcodeException
+{
+}
