@@ -125,26 +125,26 @@ class BarcodeGenerator
                 $arrcode = $this->barcode_i25($code, true);
                 break;
             }
-//            case self::TYPE_CODE_128:
-//            { // CODE 128
-//                $arrcode = $this->barcode_c128($code, '');
-//                break;
-//            }
-//            case self::TYPE_CODE_128_A:
-//            { // CODE 128 A
-//                $arrcode = $this->barcode_c128($code, 'A');
-//                break;
-//            }
-//            case self::TYPE_CODE_128_B:
-//            { // CODE 128 B
-//                $arrcode = $this->barcode_c128($code, 'B');
-//                break;
-//            }
-//            case self::TYPE_CODE_128_C:
-//            { // CODE 128 C
-//                $arrcode = $this->barcode_c128($code, 'C');
-//                break;
-//            }
+            case self::TYPE_CODE_128:
+            { // CODE 128
+                $arrcode = $this->barcode_c128($code, '');
+                break;
+            }
+            case self::TYPE_CODE_128_A:
+            { // CODE 128 A
+                $arrcode = $this->barcode_c128($code, 'A');
+                break;
+            }
+            case self::TYPE_CODE_128_B:
+            { // CODE 128 B
+                $arrcode = $this->barcode_c128($code, 'B');
+                break;
+            }
+            case self::TYPE_CODE_128_C:
+            { // CODE 128 C
+                $arrcode = $this->barcode_c128($code, 'C');
+                break;
+            }
             case self::TYPE_EAN_2:
             { // 2-Digits UPC-Based Extention
                 $arrcode = $this->barcode_eanext($code, 2);
@@ -1032,7 +1032,7 @@ class BarcodeGenerator
         $k = 0;
         for ($i = 0; $i < $len; ++$i) {
             $w += 1;
-            if (($i == ($len - 1)) OR (($i < ($len - 1)) AND ($seq[$i] != $seq{($i + 1)}))) {
+            if (($i == ($len - 1)) OR (($i < ($len - 1)) AND ($seq[$i] != $seq[($i + 1)]))) {
                 if ($seq[$i] == '1') {
                     $t = true; // bar
                 } else {
@@ -1696,7 +1696,7 @@ class BarcodeGenerator
         $w = 0;
         for ($i = 0; $i < $clen; ++$i) {
             $w += 1;
-            if (($i == ($clen - 1)) OR (($i < ($clen - 1)) AND ($seq[$i] != $seq{($i + 1)}))) {
+            if (($i == ($clen - 1)) OR (($i < ($clen - 1)) AND ($seq[$i] != $seq[($i + 1)]))) {
                 if ($seq[$i] == '1') {
                     $t = true; // bar
                 } else {
